@@ -14,8 +14,7 @@ class _HomePageState extends State<OfflineVideo> {
   int _playbackTime = 0;
 
   void _initPlayer() async {
-    _videoController = VideoPlayerController.network(
-        'https://raw.githubusercontent.com/aaditya2801/myflutter/master/Time%20Lapse%20Video%20Of%20Night%20Sky.mp4');
+    _videoController = VideoPlayerController.asset('myvideo.mp4');
     await _videoController.initialize();
     setState(() {});
   }
